@@ -54,3 +54,4 @@ M:\AzureCloudExam\AzureQueue\bin\Debug\zh-Hans\System.Spatial.resources.dll
 M:\AzureCloudExam\AzureQueue\bin\Debug\zh-Hant\System.Spatial.resources.dll
 M:\AzureCloudExam\AzureQueue\obj\Debug\AzureQueue.exe
 M:\AzureCloudExam\AzureQueue\obj\Debug\AzureQueue.pdb
+M:\AzureCloudExam\AzureQueue\obj\Debug\AzureQueue.csprojResolveAssemblyReference.cache

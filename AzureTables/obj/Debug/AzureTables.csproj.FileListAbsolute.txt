@@ -54,3 +54,4 @@ M:\AzureCloudExam\AzureTables\bin\Debug\zh-Hans\System.Spatial.resources.dll
 M:\AzureCloudExam\AzureTables\bin\Debug\zh-Hant\System.Spatial.resources.dll
 M:\AzureCloudExam\AzureTables\obj\Debug\AzureTables.exe
 M:\AzureCloudExam\AzureTables\obj\Debug\AzureTables.pdb
+M:\AzureCloudExam\AzureTables\obj\Debug\AzureTables.csprojResolveAssemblyReference.cache

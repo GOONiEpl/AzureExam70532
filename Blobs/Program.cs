@@ -11,13 +11,17 @@ namespace AzureBlobs
         {
             string storageConnection =
                     System.Environment.GetEnvironmentVariable("AzureStorageConnectionString", EnvironmentVariableTarget.User);
-                    // or use App.config 
-                    //ConfigurationManager.AppSettings["StorageConnectionString"];
+            // or use App.config 
+            //ConfigurationManager.AppSettings["StorageConnectionString"];
+
+            if (storageConnection == null)
+            {
+                Console.WriteLine("No define Environment Variable in system");
+                return;
+            }
 
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(storageConnection);
-
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
-
             CloudBlobContainer container = blobClient.GetContainerReference("objective2");
             container.CreateIfNotExists();
 
