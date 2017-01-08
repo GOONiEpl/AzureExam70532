@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Course: https://www.udemy.com/70532-azure/learn/v4/overview
+// Author course: Scott Duffy
+
+using System;
 using System.Configuration;
 using System.Data;
 using Microsoft.WindowsAzure.Storage;
@@ -34,7 +37,7 @@ namespace AzureQueue
 
             // S09L52
             // PeekMessageQueue(myQueue);
-            GetMessageQueue(myQueue);
+            // GetMessageQueue(myQueue);
 
             Console.WriteLine("\nFinished.");
             Console.ReadKey();

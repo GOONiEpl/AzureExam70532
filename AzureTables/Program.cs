@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Course: https://www.udemy.com/70532-azure/learn/v4/overview
+// Author course: Scott Duffy
+
+using System;
 using System.Configuration;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
@@ -34,7 +37,7 @@ namespace AzureTables
 
             // S09L48
             // CreateRecords(table);
-            RetrieveRecords(table);
+            // RetrieveRecords(table);
 
             Console.WriteLine("\nFinished.");
             Console.ReadKey();

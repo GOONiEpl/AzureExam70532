@@ -1,7 +1,12 @@
-﻿using System;
+﻿// Course: https://www.udemy.com/70532-azure/learn/v4/overview
+// Author course: Scott Duffy
+
+using System;
+using System.Collections.Generic;
 using System.Configuration;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
+using Microsoft.WindowsAzure.Storage.Shared.Protocol;
 
 namespace AzureBlobs
 {
@@ -37,10 +42,50 @@ namespace AzureBlobs
             // CopyBlob(container);
 
             // S08L42
-            UploadBlobSubdirectory(container);
+            // UploadBlobSubdirectory(container);
 
+            // S10L57
+            // CreateSharedAccessPolicy(container);
+
+            // S10L59
+            CreateCrosPolicy(blobClient);
+            
             Console.WriteLine("\nFinished.");
             Console.ReadKey();
+        }
+
+        private static void CreateCrosPolicy(CloudBlobClient blobClient)
+        {
+            ServiceProperties sp = new ServiceProperties();
+            sp.Cors.CorsRules.Add(new CorsRule()
+            {
+                AllowedMethods = CorsHttpMethods.Get,
+                AllowedOrigins = new List<string>() { "http://localhost:8080/"},
+                MaxAgeInSeconds = 3600,
+            });
+            blobClient.SetServiceProperties(sp);
+        }
+
+        private static void CreateSharedAccessPolicy(CloudBlobContainer container)
+        {
+            // Create a new stored access policy and sefine its containts
+            SharedAccessBlobPolicy sharedPolicy = new SharedAccessBlobPolicy()
+            {
+                SharedAccessExpiryTime = DateTime.UtcNow.AddHours(24),
+                Permissions = SharedAccessBlobPermissions.Read |
+                              SharedAccessBlobPermissions.Write |
+                              SharedAccessBlobPermissions.List
+            };
+
+            // Get the container's existing permissions
+            BlobContainerPermissions permissions = new BlobContainerPermissions();
+
+            // Add the new policy to the container's permissions
+            permissions.SharedAccessPolicies.Clear();
+            permissions.SharedAccessPolicies.Add("PolicyName", sharedPolicy);
+            container.SetPermissions(permissions);
+
+
         }
 
         private static void UploadBlobSubdirectory(CloudBlobContainer container)
