@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureTables", "AzureTables\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureQueue", "AzureQueue\AzureQueue.csproj", "{F1C17CD1-D093-41B0-B270-B31397775F3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureTestQueue", "AzureTestQueue\AzureTestQueue.csproj", "{F405C321-03EA-4B70-A6D3-1E93DC66B0C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F1C17CD1-D093-41B0-B270-B31397775F3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1C17CD1-D093-41B0-B270-B31397775F3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1C17CD1-D093-41B0-B270-B31397775F3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F405C321-03EA-4B70-A6D3-1E93DC66B0C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F405C321-03EA-4B70-A6D3-1E93DC66B0C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F405C321-03EA-4B70-A6D3-1E93DC66B0C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F405C321-03EA-4B70-A6D3-1E93DC66B0C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

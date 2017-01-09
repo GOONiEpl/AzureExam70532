@@ -3,3 +3,7 @@
 ################################################################################
 
 /AzureQueue/bin/Debug
+/AzureQueue/obj/Debug
+/AzureQueue/obj/Debug
+/AzureTables/bin/Debug
+/AzureTables/bin/Debug

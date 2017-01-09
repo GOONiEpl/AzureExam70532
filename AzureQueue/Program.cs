@@ -4,6 +4,7 @@
 using System;
 using System.Configuration;
 using System.Data;
+using System.Globalization;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
 using Microsoft.WindowsAzure.Storage.Queue;
@@ -46,7 +47,7 @@ namespace AzureQueue
         private static void GetMessageQueue(CloudQueue myQueue)
         {
             CloudQueueMessage newMessage = new CloudQueueMessage("" +
-                DateTime.Now.ToString() + " Record added correctly.");
+                DateTime.Now.ToString(CultureInfo.CurrentCulture) + " Record added correctly.");
             myQueue.AddMessage(newMessage);
             Console.WriteLine("New message: " + newMessage.AsString);
 
@@ -57,7 +58,7 @@ namespace AzureQueue
         private static void PeekMessageQueue(CloudQueue myQueue)
         {
             CloudQueueMessage newMessage = new CloudQueueMessage("" + 
-                DateTime.Now.ToString() + " Record added correctly.");
+                DateTime.Now.ToString(CultureInfo.CurrentCulture) + " Record added correctly.");
             myQueue.AddMessage(newMessage);
             Console.WriteLine("New message: " + newMessage.AsString);
 
@@ -68,7 +69,7 @@ namespace AzureQueue
         private static void InsertMessageQueue(CloudQueue myQueue)
         {
             CloudQueueMessage newMessage = new CloudQueueMessage("" +
-                DateTime.Now.ToString() + " Record added correctly.");
+                DateTime.Now.ToString(CultureInfo.CurrentCulture) + " Record added correctly.");
             myQueue.AddMessage(newMessage);
         }
     }
